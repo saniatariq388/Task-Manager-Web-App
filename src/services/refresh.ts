@@ -2,8 +2,7 @@
 
 import { cookies } from "next/headers";
 
-const STRAPI_URL = "http://localhost:1337";
-
+const STRAPI_URL = process.env.NEXT_PUBLIC_API_URL!;
 const ACCESS_TOKEN_MAXAGE = 600;
 const REFRESH_TOKEN_MAXAGE = 1209600;
 

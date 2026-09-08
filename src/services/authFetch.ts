@@ -3,7 +3,7 @@
 import { cookies } from "next/headers";
 import { refreshAccessToken } from "./refresh";
 
-const STRAPI_URL = "http://localhost:1337";
+const STRAPI_URL = process.env.NEXT_PUBLIC_API_URL!;
 
 async function doFetch(path: string, options: RequestInit, token: string) {
   return fetch(`${STRAPI_URL}${path}`, {

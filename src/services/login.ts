@@ -2,7 +2,7 @@
 
 import { cookies } from "next/headers";
 
-const STRAPI_URL = "http://localhost:1337";
+const STRAPI_URL = process.env.NEXT_PUBLIC_API_URL!;
 
 // Keep these in sync with taskManager-backend/config/plugins.ts
 const ACCESS_TOKEN_MAXAGE = 600;        // 10 min — accessTokenLifespan
